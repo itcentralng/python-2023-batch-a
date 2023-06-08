@@ -1,0 +1,24 @@
+<h1>Hello World</h1>
+<h2>My name is {{name}} </h2>
+<h2>I am {{age}} years old </h2>
+<h3>My Friends:</h3>
+<table>
+    <tbody>
+        <th>Name</th>
+        <th>Age</th>
+        {% for friend in friends %}
+        {% if friend.get('age') >= 10 %}
+        <tr>
+            <td>{{friend.get('name')}}</td>
+            <td>{{friend.get('age')}}</td>
+            <td>
+                <img src="{{url_for('static', filename='users/'+friend.get('picture', ''))}}" />
+            </td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </tbody>
+</table>
+
+<h3>HACKTHON</h3>
+<img src="{{url_for('static', filename='images/set1/hack.jpg')}}" />

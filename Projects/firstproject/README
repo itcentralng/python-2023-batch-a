@@ -1,0 +1,21 @@
+# STEP ONE:
+""" Create a folder for our project"""
+
+# STEP TWO:
+""" Create a virtual environment using the following command: python -m venv venv"""
+
+# STEP THREE:
+"""Activate your virtual environment using the  following command: 
+Windows: venv\Scripts\activate
+Mac: source venv/bin/activate
+"""
+
+# STEP FOUR:
+"""
+Install Flask using the following command: pip install flask
+"""
+
+# STEP FIVE:
+"""
+Save all your dependencies in your requirements file with the following command: pip freeze > requirements.txt
+"""
