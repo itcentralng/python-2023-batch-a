@@ -3,6 +3,7 @@ from app import db
 class Book(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)
+    author_id = db.Column(db.Integer, db.ForeignKey('author.id'))
 
     def save(self):
         db.session.add(self)
@@ -13,7 +14,7 @@ class Book(db.Model):
         return Book.query.all()
     
     @classmethod
-    def create(cls, name):
-        book = cls(name=name)
+    def create(cls, name, author_id):
+        book = cls(name=name, author_id=author_id)
         book.save()
         return book

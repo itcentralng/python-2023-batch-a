@@ -13,5 +13,6 @@ def get_all_books():
 @book.post('/add')
 def add_new_book():
     name = request.json.get('name')
-    Book.create(name)
+    author_id = request.json.get('author_id')
+    Book.create(name, author_id)
     return {'message':'Book created successfully!'}
